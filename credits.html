@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHRTBYB6Y0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SHRTBYB6Y0');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHRTBYB6Y0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SHRTBYB6Y0');
+    </script>
+
     <title>Image Credits | History Reimagined</title>
     <style>
         :root { 
@@ -33,12 +35,29 @@
             background: var(--bg-dark); 
         }
         
-<header style="background: var(--bg-dark); padding: 40px 20px; border-bottom: 2px solid var(--primary); text-align: center;">
-    <a href="index.html" style="text-decoration: none;">
-        <img src="logo.png" alt="History Reimagined Logo" style="height: 100px; width: auto; margin-bottom: 10px;">
-        <div class="brand-name" style="color: var(--primary); font-size: 2rem; font-weight: 700;">History Reimagined</div>
-    </a>
-</header>
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Unified Header Style */
+        header { 
+            background: var(--bg-dark); 
+            padding: 15px 0; 
+            border-bottom: 2px solid var(--primary);
+            text-align: center;
+        }
+
+        .header-logo {
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
         }
 
         nav { 
@@ -46,71 +65,104 @@
             text-align: center; 
             border-bottom: 1px solid #333;
         }
+
         nav a { 
             display: inline-block; 
-            padding: 15px 20px; 
+            padding: 12px 18px; 
             color: var(--text-main); 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 0.9rem; 
+            font-size: 0.85rem; 
             text-transform: uppercase; 
+            font-family: 'Cinzel', serif;
         }
+
+        nav a:hover { color: var(--accent); }
 
         .container { 
             max-width: 800px; 
             margin: 40px auto; 
             padding: 40px; 
-            background: var(--bg-card); 
+            background: var(--bg-card);
             border: 1px solid #222;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        h1 { color: var(--text-head); border-bottom: 1px solid #333; padding-bottom: 10px; }
-        h2 { color: var(--accent); margin-top: 30px; font-size: 1.2rem; text-transform: uppercase; }
-        
-        .credit-list { list-style: none; padding: 0; }
-        .credit-list li { 
-            padding: 15px 0; 
-            border-bottom: 1px solid #222; 
-            color: var(--text-sec);
+        .page-title { 
+            color: var(--text-head); 
+            text-align: center; 
+            margin-bottom: 30px; 
+            font-size: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
         }
-        .credit-list strong { color: var(--primary); }
+
+        h2 { color: var(--primary); font-size: 1.2rem; margin-top: 30px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        
+        .credit-list { list-style: none; padding: 0; margin-top: 20px; }
+        .credit-list li { 
+            margin-bottom: 20px; 
+            color: var(--text-sec); 
+            padding-bottom: 10px; 
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .credit-list strong { color: var(--text-head); display: block; }
+        .credit-list a { color: var(--accent); text-decoration: none; }
+        .credit-list a:hover { text-decoration: underline; }
 
         footer { 
             text-align: center; 
-            padding: 40px; 
-            font-size: 0.8rem; 
+            padding: 50px; 
+            font-size: 0.75rem; 
             color: #666; 
+            border-top: 1px solid #222;
+            margin-top: 60px;
         }
+        footer a { color: #666; text-decoration: none; margin: 0 10px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>History Reimagined</h1>
+    <a href="index.html">
+        <img src="logo.png" alt="History Reimagined Logo" class="header-logo">
+    </a>
 </header>
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="diets.html">Diets</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
 </nav>
 
 <div class="container">
-    <h1>Image & Resource Credits</h1>
-    <p>At History Reimagined, we are committed to honoring the archives and creators that help us bring history to life. Below is a comprehensive list of the sources used on this site.</p>
+    <h1 class="page-title">Resource Credits</h1>
+    
+    <p>History Reimagined is dedicated to historical transparency. We utilize a combination of public domain archives, licensed creative works, and original AI-assisted visualizations.</p>
 
-    <h2>Historical Archives</h2>
+    <h2>Historical Photography</h2>
     <ul class="credit-list">
-        <li><strong>F.D. Roosevelt Portrait (1944):</strong> Leon Perskie. Courtesy of the FDR Presidential Library & Museum. Licensed under <a href="https://creativecommons.org/licenses/by/2.0/" style="color:var(--accent);">CC BY 2.0</a>.</li>
-        <li><strong>Public Domain Materials:</strong> Various assets sourced from the Library of Congress and Wikimedia Commons.</li>
+        <li>
+            <strong>Portrait of Franklin D. Roosevelt (1944)</strong>
+            Source: Leon Perskie via the FDR Presidential Library & Museum. 
+            License: <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>.
+        </li>
+        <li>
+            <strong>Archival Assets</strong>
+            Various historical documents and reference images sourced via Wikimedia Commons and the Library of Congress (Public Domain).
+        </li>
     </ul>
 
-    <h2>Reimagined Visuals</h2>
+    <h2>Creative & Visuals</h2>
     <ul class="credit-list">
-        <li><strong>AI Illustrations:</strong> All atmospheric and reimagined historical scenes are original generations produced by History Reimagined using advanced AI tools. These visuals are intended for educational and storytelling purposes.</li>
+        <li>
+            <strong>Reimagined Visuals</strong>
+            All atmospheric scenes, culinary recreations, and reimagined historical environments are original generations produced by History Reimagined.
+        </li>
+        <li>
+            <strong>Site Identity</strong>
+            Logo and branding elements are original designs for History Reimagined.
+        </li>
     </ul>
 </div>
 
