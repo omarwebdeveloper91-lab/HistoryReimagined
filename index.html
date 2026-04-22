@@ -14,7 +14,7 @@
       gtag('config', 'G-SHRTBYB6Y0');
     </script>
 
-    <title>History Reimagined | Historical Diets Library</title>
+    <title>F.D. Roosevelt: The 7-Cent Lunch | History Reimagined</title>
     <style>
         :root { 
             --primary: #FFD700; 
@@ -41,7 +41,7 @@
             letter-spacing: 2px;
         }
 
-        /* Highlighted Header Style */
+        /* Unified Header Style */
         header { 
             background: var(--bg-dark); 
             padding: 15px 0; 
@@ -56,15 +56,8 @@
             border-radius: 50%;
             display: block;
             margin: 0 auto;
-            /* The "Highlighted" Style from the About page */
             border: 3px solid var(--primary);
             box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-            transition: 0.3s;
-        }
-
-        .header-logo:hover {
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
-            transform: scale(1.05);
         }
 
         nav { 
@@ -87,78 +80,71 @@
         nav a:hover { color: var(--accent); }
 
         .container { 
-            max-width: 900px; 
-            margin: 30px auto; 
-            padding: 0 20px; 
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 20px; 
         }
 
-        .page-title { 
+        .article-title { 
             color: var(--text-head); 
             text-align: center; 
-            margin-bottom: 30px; 
-            font-size: 1.5rem;
-            border-bottom: 1px solid #222;
-            padding-bottom: 15px;
-        }
-        
-        .diet-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            margin-bottom: 10px; 
+            font-size: 2.2rem;
         }
 
-        .diet-item {
-            background: var(--bg-card);
-            border: 1px solid #222;
-            border-radius: 12px;
-            transition: 0.3s;
-            text-decoration: none;
-            display: block;
-            overflow: hidden;
-        }
-
-        .diet-item:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.1);
-        }
-
-        .diet-thumb {
-            width: 100%;
-            height: 250px; 
-            object-fit: cover;
-            border-bottom: 1px solid #222;
-        }
-
-        .diet-info {
-            padding: 20px;
-        }
-
-        .diet-info h3 {
-            color: var(--text-head);
-            margin: 0 0 10px 0;
-            font-size: 1.3rem;
-        }
-
-        .diet-info p {
-            color: var(--text-sec);
-            font-size: 1rem;
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        .coming-soon {
-            background: #0f0f0f;
-            border: 1px dashed #333;
-            border-radius: 12px;
-            padding: 50px;
+        .subtitle {
             text-align: center;
-            color: #444;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: var(--text-sec);
             font-style: italic;
-            font-family: 'Cinzel', serif;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #222;
+            margin-bottom: 40px;
+        }
+
+        .content {
+            font-size: 1.15rem;
+            color: var(--text-sec);
+        }
+
+        .content h2 {
+            color: var(--primary);
+            margin-top: 40px;
+            font-size: 1.4rem;
+        }
+
+        /* Video Section */
+        .video-box {
+            text-align: center; 
+            margin: 60px 0; 
+            padding: 30px; 
+            border: 1px solid #333; 
+            border-radius: 12px; 
+            background: #0f0f0f;
+        }
+
+        .btn-facebook {
+            background: #1877F2; 
+            color: white; 
+            padding: 15px 30px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 5px; 
+            display: inline-block;
+            margin-top: 15px;
+            font-family: sans-serif;
+            transition: 0.3s;
+        }
+
+        .btn-facebook:hover {
+            background: #1565c0;
+            transform: scale(1.05);
         }
 
         footer { 
@@ -187,22 +173,33 @@
 </nav>
 
 <div class="container">
-    <h2 class="page-title">The Library of Ancient Eating</h2>
+    <h1 class="article-title">F.D. Roosevelt</h1>
+    <p class="subtitle">The Dirty Martini & The 7-Cent White House Lunch</p>
 
-    <div class="diet-grid">
+    <img src="fdr-portrait.jpg" alt="Franklin D. Roosevelt Portrait" class="hero-img">
+
+<div class="content">
+        <p>In the middle of the Great Depression, Franklin D. Roosevelt realized that his meals could be a powerful tool for leadership. While he enjoyed the finer things in life, his wife Eleanor viewed the White House kitchen as a place for social experiment. Together, they created a menu that reflected the struggles of the American people while maintaining the private traditions of the Roosevelt family.</p>
         
-        <a href="/fdr-diet.html">F.D. Roosevelt</a>
-            <img src="fdr-portrait.jpg" alt="FDR Portrait" class="diet-thumb">
-            <div class="diet-info">
-                <h3>F.D. Roosevelt</h3>
-                <p>Scrambled eggs, Dirty Martinis, and the surprising 7-cent White House lunch.</p>
-            </div>
+        <h2>The Famous 7-Cent Lunch</h2>
+        <p>Eleanor Roosevelt wanted to show that a person could live healthily on just pennies a day. This led to the creation of the infamous 7-cent lunch. Guests were often shocked to find the President of the United States eating chipped beef on toast, which was essentially dried meat in a thick white gravy. Other staples included poached eggs served over corned beef hash and simple plates of spaghetti mixed with boiled carrots and a thin white sauce. It was bland and uninspiring, but it sent a message of solidarity to a nation in breadlines.</p>
+
+        <h2>Hot Dog Diplomacy</h2>
+        <p>One of the most scandalous meals in White House history occurred in 1939 when the King and Queen of the United Kingdom visited. Instead of a grand French banquet, FDR served them a traditional American picnic featuring grilled hot dogs on paper plates. This casual choice became a global sensation, proving that the most powerful leaders in the world could share a simple meal like ordinary neighbors.</p>
+
+        <h2>The President’s Private Indulgences</h2>
+        <p>Away from the cameras, FDR maintained his own culinary rituals. Every evening he would personally mix Dirty Martinis for his inner circle, adding extra olive brine to give the drink its signature salty cloudiness. On Sunday nights, the household staff was given the evening off. The President would take over the dining room and use a silver chafing dish to scramble eggs for his family. This tradition was one of the few moments where he felt like a private citizen rather than the leader of the free world.</p>
+
+        <h2>Oddities of the New Deal Kitchen</h2>
+        <p>The White House cook, Henrietta Nesbitt, was notorious for her lack of seasoning. FDR often joked that he would trade a New Deal policy for a decent piece of roast beef. He was served things like prune pudding and broiled kidneys on a regular basis. While he often complained about the quality of the food, he rarely sent a plate back, as he knew that the austerity of the White House kitchen was a vital part of his political image.</p>
+    </div>
+
+    <div class="video-box">
+        <h3>Experience the Reimagining</h3>
+        <p>Watch our viral breakdown of FDR's dietary secrets, featuring AI-reimagined visuals of the 1940s White House kitchen.</p>
+        <a href="https://www.facebook.com/reel/1592904348449873" target="_blank" class="btn-facebook">
+            WATCH ON FACEBOOK
         </a>
-
-        <div class="coming-soon">
-            Next historical figure arriving soon...
-        </div>
-
     </div>
 </div>
 
