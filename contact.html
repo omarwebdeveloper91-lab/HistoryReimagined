@@ -50,8 +50,8 @@
 
         .container { 
             max-width: 700px; 
-            margin: 40px auto; 
-            padding: 40px 20px; 
+            margin: 60px auto; 
+            padding: 60px 20px; 
             background: var(--bg-card); 
             border: 1px solid #222;
             border-radius: 12px;
@@ -59,43 +59,38 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        h1 { color: var(--text-head); margin-bottom: 10px; }
-        p { color: var(--text-sec); margin-bottom: 30px; }
+        h1 { color: var(--text-head); margin-bottom: 20px; font-size: 2.5rem; }
+        p { color: var(--text-sec); margin-bottom: 40px; font-size: 1.2rem; }
         
-        .contact-box { 
-            margin: 25px 0; 
-            padding: 30px; 
-            border: 1px solid #333; 
+        .email-section { 
+            padding: 40px; 
+            border: 2px solid #333; 
             border-radius: 8px; 
             background: #0f0f0f;
+            display: inline-block;
             transition: 0.3s;
         }
-        .contact-box:hover { border-color: var(--accent); }
+        .email-section:hover { border-color: var(--accent); }
         
-        h3 { color: var(--accent); margin-top: 0; text-transform: uppercase; letter-spacing: 1px; }
+        h3 { color: var(--accent); margin-top: 0; text-transform: uppercase; letter-spacing: 2px; }
 
-        .btn { 
-            display: inline-block; 
-            padding: 14px 30px; 
-            background: var(--primary); 
-            color: #000; 
+        .email-link { 
+            display: block; 
+            font-size: 1.5rem;
+            color: var(--primary); 
             text-decoration: none; 
-            border-radius: 6px; 
             font-weight: bold; 
-            margin-top: 15px; 
-            transition: 0.3s;
+            margin-top: 20px;
+            word-break: break-all;
         }
-        .btn:hover { background: #fff; transform: scale(1.05); }
-        
-        .btn-messenger { background: #0084FF; color: white; }
-        .btn-messenger:hover { background: #0073e6; color: white; }
+        .email-link:hover { color: #FFFFFF; }
 
         footer { 
             text-align: center; 
             padding: 40px; 
             font-size: 0.8rem; 
             color: #666; 
-            border-top: 1px solid #222;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -113,19 +108,12 @@
 </nav>
 
 <div class="container">
-    <h1>Get In Touch</h1>
-    <p>Questions about ancient culinary habits? Business inquiries? Or just want to talk history? Use the methods below to reach us.</p>
+    <h1>Contact Us</h1>
+    <p>For business inquiries, research collaborations, or questions regarding historical diets, please reach out via email.</p>
 
-    <div class="contact-box">
-        <h3>Facebook Messenger</h3>
-        <p>The fastest way to reach the team is through our Facebook Page.</p>
-        <a href="https://m.me/YOUR_FACEBOOK_USERNAME" class="btn btn-messenger">Message Us Now</a>
-    </div>
-
-    <div class="contact-box">
-        <h3>Email Address</h3>
-        <p>For more formal inquiries or collaboration requests.</p>
-        <a href="mailto:historyreimaginedd@gmail.com" class="btn">historyreimaginedd@gmail.com</a>
+    <div class="email-section">
+        <h3>Direct Inquiry</h3>
+        <a href="mailto:historyreimaginedd@gmail.com" class="email-link">historyreimaginedd@gmail.com</a>
     </div>
 </div>
 
