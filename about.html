@@ -1,33 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHRTBYB6Y0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SHRTBYB6Y0');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHRTBYB6Y0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SHRTBYB6Y0');
+    </script>
+
     <title>About Us | History Reimagined</title>
     <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
-
-:root { 
-    --primary: #FFD700; 
-    --bg-dark: #0A0A0A; 
-}
-
-
-h1, h2, h3, .brand-name {
-    font-family: 'Cinzel', serif !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
         :root { 
             --primary: #FFD700; 
             --accent: #FFC000; 
@@ -47,12 +35,29 @@ h1, h2, h3, .brand-name {
             background: var(--bg-dark); 
         }
         
-<header style="background: var(--bg-dark); padding: 40px 20px; border-bottom: 2px solid var(--primary); text-align: center;">
-    <a href="index.html" style="text-decoration: none;">
-        <img src="logo.png" alt="History Reimagined Logo" style="height: 100px; width: auto; margin-bottom: 10px;">
-        <div class="brand-name" style="color: var(--primary); font-size: 2rem; font-weight: 700;">History Reimagined</div>
-    </a>
-</header>
+        h1, h2, h3 {
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Header - Exactly the same as Index */
+        header { 
+            background: var(--bg-dark); 
+            padding: 15px 0; 
+            border-bottom: 2px solid var(--primary);
+            text-align: center;
+        }
+
+        .header-logo {
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
         }
 
         nav { 
@@ -60,69 +65,68 @@ h1, h2, h3, .brand-name {
             text-align: center; 
             border-bottom: 1px solid #333;
         }
+
         nav a { 
             display: inline-block; 
-            padding: 15px 20px; 
+            padding: 12px 18px; 
             color: var(--text-main); 
             text-decoration: none; 
             font-weight: bold; 
-            font-size: 0.9rem; 
+            font-size: 0.85rem; 
             text-transform: uppercase; 
+            font-family: 'Cinzel', serif;
         }
+
         nav a:hover { color: var(--accent); }
 
         .container { 
-            max-width: 750px; 
+            max-width: 800px; 
             margin: 40px auto; 
-            padding: 30px; 
-            background: var(--bg-card); 
+            padding: 40px; 
+            background: var(--bg-card);
             border: 1px solid #222;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .profile-img { 
-            width: 120px; 
-            height: 120px; 
-            border-radius: 50%; 
-            margin: 0 auto 30px; 
-            display: block; 
-            border: 3px solid var(--primary); 
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        .page-title { 
+            color: var(--text-head); 
+            text-align: center; 
+            margin-bottom: 30px; 
+            font-size: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
         }
 
-        h1, h2 { color: var(--text-head); text-align: center; }
-        
-        .mission-statement { 
-            font-style: italic; 
-            font-size: 1.3rem; 
-            color: #EEE; 
-            text-align: center;
-            border-left: 3px solid var(--accent);
-            border-right: 3px solid var(--accent);
-            padding: 20px;
-            margin: 30px 0;
-            background: #1a1a1a;
+        p {
+            font-size: 1.1rem;
+            color: var(--text-sec);
+            margin-bottom: 25px;
         }
 
-        p { color: var(--text-sec); font-size: 1.1rem; margin-bottom: 20px; }
-        
-        ul { color: var(--text-sec); margin-bottom: 30px; }
-        li { margin-bottom: 10px; }
+        .mission-box {
+            border-left: 4px solid var(--primary);
+            padding-left: 20px;
+            margin: 40px 0;
+            font-style: italic;
+        }
 
         footer { 
             text-align: center; 
-            padding: 40px; 
-            font-size: 0.8rem; 
+            padding: 50px; 
+            font-size: 0.75rem; 
             color: #666; 
             border-top: 1px solid #222;
+            margin-top: 60px;
         }
+        footer a { color: #666; text-decoration: none; margin: 0 10px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>History Reimagined</h1>
+    <a href="index.html">
+        <img src="logo.png" alt="History Reimagined Logo" class="header-logo">
+    </a>
 </header>
 
 <nav>
@@ -132,31 +136,20 @@ h1, h2, h3, .brand-name {
 </nav>
 
 <div class="container">
-    <img src="636979138_122151552818959654_384462261817497061_n (1).jpg" alt="History Reimagined Logo" class="profile-img">
+    <h1 class="page-title">About the Project</h1>
     
-    <h1>Our Story</h1>
-    
-    <div class="mission-statement">
-        "To understand the soul of a civilization, you must first look at what sat upon their dinner table."
+    <p>Welcome to <strong>History Reimagined</strong>. We believe that history isn't just a collection of dates and dusty documents—it is a living, breathing story that can be seen, felt, and even tasted.</p>
+
+    <div class="mission-box">
+        <h3>Our Mission</h3>
+        <p>"To bridge the gap between the ancient world and the modern viewer through immersive storytelling and visual reimagining."</p>
     </div>
 
-    <p>Welcome to <strong>History Reimagined</strong>. What started as a passion project on Facebook has grown into a dedicated exploration of the culinary habits that fueled the most iconic figures and eras in human history.</p>
+    <h2>Why Historical Diets?</h2>
+    <p>Food is the ultimate universal language. By exploring what the most famous (and infamous) figures in history ate, we gain a unique perspective into their daily lives, their struggles, and the cultures they built. Whether it's the humble 7-cent lunch of a President or the grand feasts of ancient empires, every meal tells a story.</p>
 
-    <p>We believe that history shouldn't just be about dates and names—it should be felt, smelled, and tasted. By researching the actual diets of people from the past, we bridge the gap between ancient scrolls and modern curiosity.</p>
-
-    <h2>What We Cover</h2>
-    <ul>
-        <li><strong>Royal Feasts:</strong> The extravagant and often strange diets of kings and queens.</li>
-        <li><strong>Warrior Fuel:</strong> What kept the Spartans, Samurai, and Roman Legionnaires ready for battle.</li>
-        <li><strong>Historical Eras:</strong> Deep dives into how common people ate during the Industrial Revolution, the Black Death, and the Viking Age.</li>
-    </ul>
-
-    <h2>The Goal</h2>
-    <p>Our mission is to provide accurate, fascinating, and high-quality information to our growing community. Whether you're a history buff, a foodie, or just someone looking for a great dinner-party story, you've found the right place.</p>
-    
-    <p style="text-align: center;">
-        Follow our journey on <a href="#" style="color: var(--accent);">Facebook</a>.
-    </p>
+    <h2>The "Reimagined" Vision</h2>
+    <p>Using a blend of rigorous historical research and modern AI-assisted visuals, we aim to bring these moments to life. Our goal is to provide an entertaining yet educational archive that makes history accessible to everyone, everywhere.</p>
 </div>
 
 <footer>
