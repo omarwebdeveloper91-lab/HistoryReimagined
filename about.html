@@ -5,20 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | History Reimagined</title>
     <style>
-        :root { --primary: #2c3e50; --accent: #d4af37; --text: #333; }
-        body { font-family: 'Georgia', serif; line-height: 1.8; color: var(--text); margin: 0; padding: 0; background: #fdfcf0; }
+        /* Color Palette: Black Background, Gold/Yellow Accents, White Text */
+        :root { 
+            --primary: #FFD700; /* Rich Gold */
+            --accent: #FFC000; /* Warm Yellow */
+            --bg-dark: #0A0A0A; /* Pure Black for Background */
+            --bg-card: #141414; /* Slightly lighter Black for cards */
+            --text-main: #FFFFFF; /* White for paragraph text */
+            --text-head: #FFD700; /* Gold for main headings */
+            --text-sec: #CCCCCC; /* Light Grey for descriptions */
+        }
+
+        body { 
+            font-family: 'Georgia', serif; 
+            line-height: 1.8; 
+            color: var(--text-main); 
+            margin: 0; 
+            padding: 0; 
+            background: var(--bg-dark); 
+        }
         
-        header { background: var(--primary); color: white; text-align: center; padding: 30px 20px; }
-        nav { background: #1a252f; text-align: center; padding: 10px; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 0.9rem; }
+        /* Drama-Focused Header */
+        header { 
+            background: var(--bg-dark); 
+            color: var(--text-head); 
+            text-align: center; 
+            padding: 60px 20px; 
+            border-bottom: 3px solid var(--accent);
+        }
         
-        .container { max-width: 700px; margin: 40px auto; padding: 20px; background: white; border: 1px solid #ddd; border-radius: 8px; }
-        h1, h2 { color: var(--primary); }
-        .mission { font-style: italic; font-size: 1.2rem; color: #555; border-left: 4px solid var(--accent); padding-left: 20px; margin: 30px 0; }
+        /* Your Logo Styled as a Profile Image */
+        .header-img { 
+            width: 140px; 
+            height: 140px; 
+            border-radius: 50%; 
+            border: 4px solid var(--primary); 
+            object-fit: cover; 
+            margin-bottom: 20px; 
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 2.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        header p { 
+            font-style: italic; 
+            color: #EEEEEE; /* off-white description */
+            margin-top: 10px; 
+            font-size: 1.1rem;
+        }
+
+        /* Nav Menu: Subtle & Gold */
+        nav { 
+            background: var(--bg-card); 
+            text-align: center; 
+            sticky; 
+            top: 0; 
+            border-bottom: 1px solid #333;
+            z-index: 1000;
+        }
+        nav a { 
+            display: inline-block; 
+            padding: 18px 25px; 
+            color: var(--text-main); 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+            transition: 0.3s;
+        }
+        nav a:hover { 
+            color: var(--accent); 
+            background: #222;
+        }
         
-        .profile-img { width: 150px; height: 150px; background: #eee; border-radius: 50%; margin: 0 auto 20px; display: block; object-fit: cover; border: 3px solid var(--accent); }
+        .container { 
+            max-width: 800px; 
+            margin: auto; 
+            padding: 30px 20px; 
+        }
         
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #666; }
+        /* High-Contrast Article Cards for Facebook Traffic */
+        .featured-card { 
+            background: var(--bg-card); 
+            border: 1px solid #333; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            margin-bottom: 40px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3); 
+            transition: 0.3s;
+        }
+        .featured-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .card-content { padding: 30px; }
+        .card-content h2 { 
+            margin-top: 0; 
+            color: var(--text-head); 
+            font-size: 1.8rem;
+        }
+        .card-content p {
+            color: var(--text-sec);
+            font-size: 1.1rem;
+        }
+
+        /* Gold Tags */
+        .tag { 
+            background: var(--accent); 
+            color: var(--bg-dark); 
+            padding: 4px 12px; 
+            font-size: 0.75rem; 
+            border-radius: 4px; 
+            text-transform: uppercase; 
+            font-weight: bold; 
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* Read More Link Styling */
+        .read-more-link {
+            color: var(--accent);
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent);
+        }
+        .read-more-link:hover {
+            color: #FFFFFF;
+            border-bottom-style: solid;
+        }
+
+        footer { 
+            background: var(--bg-card); 
+            text-align: center; 
+            padding: 60px 20px; 
+            font-size: 0.9rem; 
+            color: #999999; 
+            margin-top: 60px; 
+            border-top: 3px solid var(--accent);
+        }
+        footer a { color: #CCCCCC; text-decoration: none; }
+        footer a:hover { color: var(--accent); }
+        
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.1rem; }
+            body { font-size: 18px; }
+            .header-img { width: 100px; height: 100px; }
+            .container { padding: 15px; }
+            .card-content { padding: 20px; }
+        }
     </style>
 </head>
 <body>
