@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Diets Library | History Reimagined</title>
+    <style>
+        :root { 
+            --primary: #FFD700; 
+            --accent: #FFC000; 
+            --bg-dark: #0A0A0A; 
+            --bg-card: #141414; 
+            --text-main: #FFFFFF; 
+            --text-head: #FFD700; 
+            --text-sec: #CCCCCC; 
+        }
+
+        body { 
+            font-family: 'Georgia', serif; 
+            line-height: 1.8; 
+            color: var(--text-main); 
+            margin: 0; 
+            padding: 0; 
+            background: var(--bg-dark); 
+        }
+        
+        header { 
+            background: var(--bg-dark); 
+            color: var(--text-head); 
+            text-align: center; 
+            padding: 40px 20px; 
+            border-bottom: 2px solid var(--accent);
+        }
+
+        nav { 
+            background: var(--bg-card); 
+            text-align: center; 
+            border-bottom: 1px solid #333;
+        }
+        nav a { 
+            display: inline-block; 
+            padding: 15px 20px; 
+            color: var(--text-main); 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+        }
+        nav a:hover { color: var(--accent); }
+
+        .container { 
+            max-width: 900px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+        }
+
+        h1 { color: var(--text-head); text-align: center; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .diet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .category-title {
+            color: var(--accent);
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+
+        .diet-item {
+            background: var(--bg-card);
+            border: 1px solid #222;
+            padding: 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+
+        .diet-item:hover {
+            border-color: var(--accent);
+            background: #1a1a1a;
+            transform: translateY(-3px);
+        }
+
+        .diet-item h3 {
+            color: var(--text-head);
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .diet-item p {
+            color: var(--text-sec);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        footer { 
+            text-align: center; 
+            padding: 60px; 
+            font-size: 0.8rem; 
+            color: #666; 
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Historical Diets</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="diets.html">Diets</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h1>The Library of Ancient Eating</h1>
+
+    <h2 class="category-title">Famous Figures</h2>
+    <div class="diet-grid">
+        <a href="blog/spartan-diet.html" class="diet-item">
+            <h3>Spartan Warriors</h3>
+            <p>Exploring the infamous "Black Broth" and military rations of Ancient Greece.</p>
+        </a>
+        <a href="blog/napoleon-diet.html" class="diet-item">
+            <h3>Napoleon Bonaparte</h3>
+            <p>How the Little Corporal ate on the battlefield and changed food preservation.</p>
+        </a>
+        </div>
+
+    <h2 class="category-title">Historical Eras</h2>
+    <div class="diet-grid">
+        <a href="blog/viking-era.html" class="diet-item">
+            <h3>The Viking Age</h3>
+            <p>Smoked fish, fermented curds, and the hearty meals of the Norsemen.</p>
+        </a>
+        <a href="blog/victorian-era.html" class="diet-item">
+            <h3>Victorian England</h3>
+            <p>From the extravagant banquets of the rich to the grueling diets of the poor.</p>
+        </a>
+        </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 History Reimagined</p>
+</footer>
+
+</body>
+</html>
