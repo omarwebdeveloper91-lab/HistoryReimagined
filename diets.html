@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHRTBYB6Y0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SHRTBYB6Y0');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHRTBYB6Y0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SHRTBYB6Y0');
+    </script>
+
     <title>Historical Diets Library | History Reimagined</title>
     <style>
         :root { 
@@ -55,7 +55,6 @@
             font-size: 0.9rem; 
             text-transform: uppercase; 
         }
-        nav a:hover { color: var(--accent); }
 
         .container { 
             max-width: 900px; 
@@ -67,53 +66,63 @@
         
         .diet-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             margin-top: 30px;
-        }
-
-        .category-title {
-            color: var(--accent);
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            margin-top: 50px;
-            text-transform: uppercase;
-            font-size: 1.4rem;
         }
 
         .diet-item {
             background: var(--bg-card);
             border: 1px solid #222;
-            padding: 25px;
-            border-radius: 8px;
+            border-radius: 12px;
             transition: 0.3s;
             text-decoration: none;
             display: block;
+            overflow: hidden;
         }
 
         .diet-item:hover {
             border-color: var(--accent);
-            background: #1a1a1a;
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.1);
         }
 
-        .diet-item h3 {
+        .diet-thumb {
+            width: 100%;
+            height: 280px; /* Slightly taller for a more dramatic portrait look */
+            object-fit: cover;
+            border-bottom: 1px solid #222;
+        }
+
+        .diet-info {
+            padding: 20px;
+        }
+
+        .diet-info h3 {
             color: var(--text-head);
             margin: 0 0 10px 0;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
 
-        .diet-item p {
+        .diet-info p {
             color: var(--text-sec);
             font-size: 1rem;
             margin: 0;
+            line-height: 1.5;
         }
 
         .coming-soon {
-            color: #555;
-            font-style: italic;
-            padding: 20px;
+            background: #0f0f0f;
+            border: 1px dashed #333;
+            border-radius: 12px;
+            padding: 60px;
             text-align: center;
+            color: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            font-size: 1.1rem;
         }
 
         footer { 
@@ -122,7 +131,10 @@
             font-size: 0.8rem; 
             color: #666; 
             border-top: 1px solid #222;
+            margin-top: 80px;
         }
+        footer a { color: #666; text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: var(--primary); }
     </style>
 </head>
 <body>
@@ -139,24 +151,27 @@
 </nav>
 
 <div class="container">
-    <h1>The Library of Ancient Eating</h1>
+    <h1>The Gallery of Ancient Eating</h1>
 
-    <h2 class="category-title">Famous Figures</h2>
     <div class="diet-grid">
+        
         <a href="fdr-diet.html" class="diet-item">
-            <h3>F.D. Roosevelt</h3>
-            <p>From the Dirty Martini to the 7.5 cent lunch: A deep dive into the 32nd President's kitchen.</p>
+            <img src="fdr-portrait.jpg" alt="Franklin D. Roosevelt 1944 Portrait" class="diet-thumb">
+            <div class="diet-info">
+                <h3>F.D. Roosevelt</h3>
+                <p>From the scandalous 'Hot Dog Diplomacy' to the Sunday night egg tradition.</p>
+            </div>
         </a>
-    </div>
 
-    <h2 class="category-title">Historical Eras</h2>
-    <div class="diet-grid">
-        <p class="coming-soon">New historical era breakdowns coming soon. Follow our Facebook page for updates!</p>
+        <div class="coming-soon">
+            New historical figure arriving soon...
+        </div>
+
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 History Reimagined | <a href="credits.html" style="color:#666; text-decoration:none;">Image Credits</a></p>
+    <p>&copy; 2026 History Reimagined | <a href="credits.html">Image Credits</a> | <a href="privacy.html">Privacy Policy</a></p>
 </footer>
 
 </body>
