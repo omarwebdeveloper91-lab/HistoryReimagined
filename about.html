@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | History Reimagined</title>
     <style>
-        /* Color Palette: Black Background, Gold/Yellow Accents, White Text */
         :root { 
-            --primary: #FFD700; /* Rich Gold */
-            --accent: #FFC000; /* Warm Yellow */
-            --bg-dark: #0A0A0A; /* Pure Black for Background */
-            --bg-card: #141414; /* Slightly lighter Black for cards */
-            --text-main: #FFFFFF; /* White for paragraph text */
-            --text-head: #FFD700; /* Gold for main headings */
-            --text-sec: #CCCCCC; /* Light Grey for descriptions */
+            --primary: #FFD700; 
+            --accent: #FFC000; 
+            --bg-dark: #0A0A0A; 
+            --bg-card: #141414; 
+            --text-main: #FFFFFF; 
+            --text-head: #FFD700; 
+            --text-sec: #CCCCCC; 
         }
 
         body { 
@@ -25,140 +24,75 @@
             background: var(--bg-dark); 
         }
         
-        /* Drama-Focused Header */
         header { 
             background: var(--bg-dark); 
             color: var(--text-head); 
             text-align: center; 
-            padding: 60px 20px; 
-            border-bottom: 3px solid var(--accent);
-        }
-        
-        /* Your Logo Styled as a Profile Image */
-        .header-img { 
-            width: 140px; 
-            height: 140px; 
-            border-radius: 50%; 
-            border: 4px solid var(--primary); 
-            object-fit: cover; 
-            margin-bottom: 20px; 
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            padding: 40px 20px; 
+            border-bottom: 2px solid var(--accent);
         }
 
-        header h1 { 
-            margin: 0; 
-            font-size: 2.8rem; 
-            text-transform: uppercase; 
-            letter-spacing: 3px; 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        header p { 
-            font-style: italic; 
-            color: #EEEEEE; /* off-white description */
-            margin-top: 10px; 
-            font-size: 1.1rem;
-        }
-
-        /* Nav Menu: Subtle & Gold */
         nav { 
             background: var(--bg-card); 
             text-align: center; 
-            sticky; 
-            top: 0; 
             border-bottom: 1px solid #333;
-            z-index: 1000;
         }
         nav a { 
             display: inline-block; 
-            padding: 18px 25px; 
+            padding: 15px 20px; 
             color: var(--text-main); 
             text-decoration: none; 
             font-weight: bold; 
             font-size: 0.9rem; 
             text-transform: uppercase; 
-            transition: 0.3s;
         }
-        nav a:hover { 
-            color: var(--accent); 
-            background: #222;
-        }
-        
+        nav a:hover { color: var(--accent); }
+
         .container { 
-            max-width: 800px; 
-            margin: auto; 
-            padding: 30px 20px; 
-        }
-        
-        /* High-Contrast Article Cards for Facebook Traffic */
-        .featured-card { 
+            max-width: 750px; 
+            margin: 40px auto; 
+            padding: 30px; 
             background: var(--bg-card); 
-            border: 1px solid #333; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            margin-bottom: 40px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3); 
-            transition: 0.3s;
-        }
-        .featured-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
+            border: 1px solid #222;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .card-content { padding: 30px; }
-        .card-content h2 { 
-            margin-top: 0; 
-            color: var(--text-head); 
-            font-size: 1.8rem;
-        }
-        .card-content p {
-            color: var(--text-sec);
-            font-size: 1.1rem;
-        }
-
-        /* Gold Tags */
-        .tag { 
-            background: var(--accent); 
-            color: var(--bg-dark); 
-            padding: 4px 12px; 
-            font-size: 0.75rem; 
-            border-radius: 4px; 
-            text-transform: uppercase; 
-            font-weight: bold; 
-            display: inline-block;
-            margin-bottom: 15px;
+        .profile-img { 
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            margin: 0 auto 30px; 
+            display: block; 
+            border: 3px solid var(--primary); 
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
 
-        /* Read More Link Styling */
-        .read-more-link {
-            color: var(--accent);
-            font-weight: bold;
-            text-decoration: none;
-            border-bottom: 1px dashed var(--accent);
+        h1, h2 { color: var(--text-head); text-align: center; }
+        
+        .mission-statement { 
+            font-style: italic; 
+            font-size: 1.3rem; 
+            color: #EEE; 
+            text-align: center;
+            border-left: 3px solid var(--accent);
+            border-right: 3px solid var(--accent);
+            padding: 20px;
+            margin: 30px 0;
+            background: #1a1a1a;
         }
-        .read-more-link:hover {
-            color: #FFFFFF;
-            border-bottom-style: solid;
-        }
+
+        p { color: var(--text-sec); font-size: 1.1rem; margin-bottom: 20px; }
+        
+        ul { color: var(--text-sec); margin-bottom: 30px; }
+        li { margin-bottom: 10px; }
 
         footer { 
-            background: var(--bg-card); 
             text-align: center; 
-            padding: 60px 20px; 
-            font-size: 0.9rem; 
-            color: #999999; 
-            margin-top: 60px; 
-            border-top: 3px solid var(--accent);
-        }
-        footer a { color: #CCCCCC; text-decoration: none; }
-        footer a:hover { color: var(--accent); }
-        
-        /* Mobile Optimization */
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.1rem; }
-            body { font-size: 18px; }
-            .header-img { width: 100px; height: 100px; }
-            .container { padding: 15px; }
-            .card-content { padding: 20px; }
+            padding: 40px; 
+            font-size: 0.8rem; 
+            color: #666; 
+            border-top: 1px solid #222;
         }
     </style>
 </head>
@@ -178,24 +112,29 @@
 <div class="container">
     <img src="636979138_122151552818959654_384462261817497061_n (1).jpg" alt="History Reimagined Logo" class="profile-img">
     
-    <h1>About History Reimagined</h1>
+    <h1>Our Story</h1>
     
-    <p class="mission">"We believe that to truly understand the people of the past, you have to look at what was on their plates."</p>
+    <div class="mission-statement">
+        "To understand the soul of a civilization, you must first look at what sat upon their dinner table."
+    </div>
 
-    <p>Welcome to <strong>History Reimagined</strong>. Originally started as a Facebook community, this project was born out of a fascination with the daily lives of those who shaped our world. While history books focus on battles and treaties, we focus on the breakfast, lunch, and dinner of the past.</p>
+    <p>Welcome to <strong>History Reimagined</strong>. What started as a passion project on Facebook has grown into a dedicated exploration of the culinary habits that fueled the most iconic figures and eras in human history.</p>
 
-    <h2>Our Mission</h2>
-    <p>Food is the ultimate universal language. By exploring the diets of famous historical figures—from the strict military rations of Roman Legionnaires to the extravagant feasts of the Renaissance—we aim to bring history to life in a way that is relatable, surprising, and educational.</p>
+    <p>We believe that history shouldn't just be about dates and names—it should be felt, smelled, and tasted. By researching the actual diets of people from the past, we bridge the gap between ancient scrolls and modern curiosity.</p>
 
-    <h2>What We Explore</h2>
+    <h2>What We Cover</h2>
     <ul>
-        <li><strong>Historical Figures:</strong> What fueled the minds of geniuses and the bodies of conquerors?</li>
-        <li><strong>Era Studies:</strong> How geography and technology dictated the diets of the Vikings, Ancient Egyptians, and more.</li>
-        <li><strong>Recreated Recipes:</strong> Bringing ancient flavors into the modern kitchen.</li>
+        <li><strong>Royal Feasts:</strong> The extravagant and often strange diets of kings and queens.</li>
+        <li><strong>Warrior Fuel:</strong> What kept the Spartans, Samurai, and Roman Legionnaires ready for battle.</li>
+        <li><strong>Historical Eras:</strong> Deep dives into how common people ate during the Industrial Revolution, the Black Death, and the Viking Age.</li>
     </ul>
 
-    <h2>Join the Conversation</h2>
-    <p>Most of our community interaction happens on our <a href="https://www.facebook.com/HistoryReimaginedd/">Facebook Page</a>. We invite you to follow us there for daily bite-sized history facts and vibrant discussions with fellow history enthusiasts.</p>
+    <h2>The Goal</h2>
+    <p>Our mission is to provide accurate, fascinating, and high-quality information to our growing community. Whether you're a history buff, a foodie, or just someone looking for a great dinner-party story, you've found the right place.</p>
+    
+    <p style="text-align: center;">
+        Follow our journey on <a href="#" style="color: var(--accent);">Facebook</a>.
+    </p>
 </div>
 
 <footer>
