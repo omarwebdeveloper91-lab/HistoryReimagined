@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHRTBYB6Y0"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -14,18 +16,6 @@
 
     <title>History Reimagined | Historical Diets Library</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
-
-:root { 
-    --primary: #FFD700; 
-    --bg-dark: #0A0A0A; 
-}
-
-h1, h2, h3, .brand-name {
-    font-family: 'Cinzel', serif !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
         :root { 
             --primary: #FFD700; 
             --accent: #FFC000; 
@@ -45,12 +35,31 @@ h1, h2, h3, .brand-name {
             background: var(--bg-dark); 
         }
         
-<header style="background: var(--bg-dark); padding: 40px 20px; border-bottom: 2px solid var(--primary); text-align: center;">
-    <a href="index.html" style="text-decoration: none;">
-        <img src="logo.png" alt="History Reimagined Logo" style="height: 100px; width: auto; margin-bottom: 10px;">
-        <div class="brand-name" style="color: var(--primary); font-size: 2rem; font-weight: 700;">History Reimagined</div>
-    </a>
-</header>
+        /* Unified Header Font */
+        h1, h2, h3, .brand-name {
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header { 
+            background: var(--bg-dark); 
+            padding: 40px 20px; 
+            border-bottom: 2px solid var(--primary);
+            text-align: center;
+        }
+
+        .header-logo {
+            height: 100px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+
+        .brand-name {
+            color: var(--primary);
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-decoration: none;
         }
 
         nav { 
@@ -58,6 +67,7 @@ h1, h2, h3, .brand-name {
             text-align: center; 
             border-bottom: 1px solid #333;
         }
+
         nav a { 
             display: inline-block; 
             padding: 15px 20px; 
@@ -66,7 +76,9 @@ h1, h2, h3, .brand-name {
             font-weight: bold; 
             font-size: 0.9rem; 
             text-transform: uppercase; 
+            font-family: 'Cinzel', serif;
         }
+
         nav a:hover { color: var(--accent); }
 
         .container { 
@@ -75,7 +87,12 @@ h1, h2, h3, .brand-name {
             padding: 0 20px; 
         }
 
-        h1 { color: var(--text-head); text-align: center; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
+        .page-title { 
+            color: var(--text-head); 
+            text-align: center; 
+            margin-bottom: 40px; 
+            font-size: 1.8rem;
+        }
         
         .diet-grid {
             display: grid;
@@ -122,6 +139,7 @@ h1, h2, h3, .brand-name {
             font-size: 1rem;
             margin: 0;
             line-height: 1.5;
+            font-family: 'Georgia', serif; /* Keeps body text readable */
         }
 
         .coming-soon {
@@ -135,6 +153,7 @@ h1, h2, h3, .brand-name {
             align-items: center;
             justify-content: center;
             font-style: italic;
+            font-family: 'Cinzel', serif;
         }
 
         footer { 
@@ -146,12 +165,16 @@ h1, h2, h3, .brand-name {
             margin-top: 80px;
         }
         footer a { color: #666; text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: var(--primary); }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>History Reimagined</h1>
+    <a href="index.html" style="text-decoration: none;">
+        <img src="logo.png" alt="History Reimagined Logo" class="header-logo">
+        <div class="brand-name">History Reimagined</div>
+    </a>
 </header>
 
 <nav>
@@ -161,7 +184,7 @@ h1, h2, h3, .brand-name {
 </nav>
 
 <div class="container">
-    <h1>The Library of Ancient Eating</h1>
+    <h2 class="page-title">The Library of Ancient Eating</h2>
 
     <div class="diet-grid">
         
@@ -169,7 +192,7 @@ h1, h2, h3, .brand-name {
             <img src="fdr-portrait.jpg" alt="FDR Portrait" class="diet-thumb">
             <div class="diet-info">
                 <h3>F.D. Roosevelt</h3>
-                <p>The 32nd President's surprising journey through Depression-era dining.</p>
+                <p>Scrambled eggs, Dirty Martinis, and the surprising 7-cent White House lunch.</p>
             </div>
         </a>
 
