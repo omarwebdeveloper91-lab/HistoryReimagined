@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHRTBYB6Y0"></script>
     <script>
@@ -13,246 +17,59 @@
       gtag('js', new Date());
       gtag('config', 'G-SHRTBYB6Y0');
     </script>
+    
     <script data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTozMDk5ZjRkNi01ZGNiLTQ4ODItOGY3OC05NjFkNDI2ZjZiZTY=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
 
     <title>History Reimagined | The Library of Ancient Eating</title>
-    <style>
-        :root { 
-            --primary: #FFD700; 
-            --accent: #FFC000; 
-            --bg-dark: #0A0A0A; 
-            --bg-card: #141414; 
-            --text-main: #FFFFFF; 
-            --text-head: #FFD700; 
-            --text-sec: #CCCCCC; 
-        }
-
-        body { 
-            font-family: 'Georgia', serif; 
-            line-height: 1.8; 
-            color: var(--text-main); 
-            margin: 0; 
-            padding: 0; 
-            background: var(--bg-dark); 
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Cinzel', serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Header Style */
-        header { 
-            background: var(--bg-dark); 
-            padding: 20px 0; 
-            border-bottom: 2px solid var(--primary);
-            text-align: center;
-        }
-
-        .header-logo {
-            height: 70px;
-            width: 70px;
-            object-fit: cover;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto;
-            border: 3px solid var(--primary);
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-            transition: 0.3s;
-        }
-
-        .header-logo:hover {
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
-            transform: scale(1.05);
-        }
-
-        /* Navigation */
-        nav { 
-            background: var(--bg-card); 
-            text-align: center; 
-            border-bottom: 1px solid #333;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a { 
-            display: inline-block; 
-            padding: 15px 25px; 
-            color: var(--text-main); 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 0.9rem; 
-            text-transform: uppercase; 
-            font-family: 'Cinzel', serif;
-            transition: color 0.3s;
-        }
-
-        nav a:hover { color: var(--accent); }
-
-        /* Main Content */
-        .container { 
-            max-width: 1000px; 
-            margin: 40px auto; 
-            padding: 0 20px; 
-        }
-
-        .page-title { 
-            color: var(--text-head); 
-            text-align: center; 
-            margin-bottom: 40px; 
-            font-size: 2rem;
-            border-bottom: 1px solid #222;
-            padding-bottom: 20px;
-        }
-        
-        /* Grid System */
-        .diet-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .diet-item {
-            background: var(--bg-card);
-            border: 1px solid #222;
-            border-radius: 12px;
-            transition: 0.4s;
-            text-decoration: none;
-            display: block;
-            overflow: hidden;
-        }
-
-        .diet-item:hover {
-            border-color: var(--primary);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
-        }
-
-        .diet-thumb {
-            width: 100%;
-            height: 250px; 
-            object-fit: cover;
-            border-bottom: 1px solid #222;
-            filter: grayscale(20%);
-            transition: 0.4s;
-        }
-
-        .diet-item:hover .diet-thumb {
-            filter: grayscale(0%);
-        }
-
-        .diet-info {
-            padding: 25px;
-        }
-
-        .diet-info h3 {
-            color: var(--text-head);
-            margin: 0 0 12px 0;
-            font-size: 1.4rem;
-        }
-
-        .diet-info p {
-            color: var(--text-sec);
-            font-size: 1rem;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* Coming Soon Placeholder */
-        .coming-soon {
-            background: #0f0f0f;
-            border: 2px dashed #333;
-            border-radius: 12px;
-            padding: 60px 30px;
-            text-align: center;
-            color: #555;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-style: italic;
-            font-family: 'Cinzel', serif;
-        }
-
-        .coming-soon span {
-            display: block;
-            margin-top: 10px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Footer */
-        footer { 
-            text-align: center; 
-            padding: 60px 20px; 
-            font-size: 0.8rem; 
-            color: #666; 
-            border-top: 1px solid #222;
-            margin-top: 80px;
-            background: #050505;
-        }
-
-        footer a { 
-            color: #888; 
-            text-decoration: none; 
-            margin: 0 15px; 
-            transition: color 0.3s;
-        }
-
-        footer a:hover { color: var(--primary); }
-
-        @media (max-width: 600px) {
-            .page-title { font-size: 1.5rem; }
-            nav a { padding: 10px 15px; font-size: 0.75rem; }
-        }
-    </style>
 </head>
 <body>
 
-<header>
-    <a href="https://reimaginedhistory.com">
-        <img src="logo.png" alt="History Reimagined Logo" class="header-logo">
-    </a>
-</header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<div class="container">
-    <h1 class="page-title">The Library of Ancient Eating</h1>
-
-    <div class="diet-grid">
-        
-        <a href="fdr-diet.html" class="diet-item">
-            <img src="fdr-portrait.jpg" alt="F.D. Roosevelt Portrait" class="diet-thumb">
-            <div class="diet-info">
-                <h3>F.D. Roosevelt</h3>
-                <p>Scrambled eggs, Dirty Martinis, and the surprising strategy behind the 7-cent White House lunch.</p>
-            </div>
+    <header>
+        <a href="https://reimaginedhistory.com">
+            <img src="logo.png" alt="History Reimagined Logo" class="header-logo" width="70" height="70">
         </a>
+    </header>
 
-        <div class="coming-soon">
-            Next historical figure arriving soon
-            <span>Visualizing the next chapter</span>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main id="main-content">
+        <div class="container">
+            <h1 class="page-title">The Library of Ancient Eating</h1>
+
+            <div class="diet-grid">
+                
+                <a href="fdr-diet.html" class="diet-item">
+                    <img src="fdr-portrait.jpg" alt="F.D. Roosevelt Portrait" class="diet-thumb" loading="eager" fetchpriority="high">
+                    <div class="diet-info">
+                        <h3>F.D. Roosevelt</h3>
+                        <p>Scrambled eggs, Dirty Martinis, and the surprising strategy behind the 7-cent White House lunch.</p>
+                    </div>
+                </a>
+
+                <div class="diet-item" style="border: 2px dashed #333; background: #0a0a0a; display: flex; align-items: center; justify-content: center; min-height: 400px; text-align: center; cursor: default;">
+                    <div class="diet-info">
+                        <h3 style="color: #444; font-family: 'Cinzel', serif;">Coming Soon</h3>
+                        <p style="color: #666; font-style: italic;">Visualizing the next chapter...</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </main>
 
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2026 History Reimagined. All rights reserved.</p>
-    <p>
-        <a href="credits.html">Image Credits</a> | 
-        <a href="privacy.html">Privacy Policy</a>
-    </p>
-</footer>
+    <footer>
+        <p>&copy; 2026 History Reimagined. All rights reserved.</p>
+        <p>
+            <a href="credits.html">Image Credits</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
 
 </body>
 </html>
- 
